@@ -33,21 +33,34 @@ const initialState = {
 
 function reducer(state, action) {
     switch (action.type) {
+        // 이미 깔끔하기 때문에 굳이 immer를 사용할 필요는 없다.
+        // immer를 사용해야할 경우에만 사용하는 것이 좋다. (update의 경우가 까다로울 경우..)
         case 'CREATE_USER':
-            return {
+            return produce(state, (draft) => {
+                draft.users.push(action.user);
+            });
+        /* return {
                 inputs: initialState.inputs,
                 users: state.users.concat(action.user),
-            };
+            }; */
         case 'TOGGLE_USER':
-            return {
+            return produce(state, (draft) => {
+                const user = draft.users.find((user) => user.id === action.id);
+                user.active = !user.active;
+            });
+        /* return {
                 ...state,
                 users: state.users.map((user) => (user.id === action.id ? { ...user, active: !user.active } : user)),
-            };
+            }; */
         case 'REMOVE_USER':
-            return {
+            return produce(state, (draft) => {
+                const index = draft.users.findIndex((user) => user.id === action.id);
+                draft.users.splice(index, 1);
+            });
+        /*  return {
                 ...state,
                 users: state.users.filter((user) => user.id !== action.id),
-            };
+            }; */
         default:
             throw new Error('Unhandled Action');
     }
