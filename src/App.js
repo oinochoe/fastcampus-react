@@ -3,8 +3,6 @@ import produce from 'immer';
 import UserList from './UserList';
 import CreateUser from './CreateUser';
 
-window.produce = produce;
-
 function countActiveUsers(users) {
     console.log('활성 사용자 수를 세는중...');
     return users.filter((user) => user.active).length;
