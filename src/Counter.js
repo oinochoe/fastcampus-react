@@ -1,5 +1,18 @@
-import React, { useReducer } from 'react';
+import React, { Component } from 'react';
 
+class Counter extends Component {
+    render() {
+        return (
+            <div>
+                <h1>0</h1>
+                <button>+1</button>
+                <button>-1</button>
+            </div>
+        );
+    }
+}
+
+/*
 function reducer(state, action) {
     switch (action.type) {
         case 'INCREMENT':
@@ -33,6 +46,6 @@ function Counter() {
             <button onClick={onDecrease}>-1</button>
         </div>
     );
-}
+} */
 
 export default Counter;
