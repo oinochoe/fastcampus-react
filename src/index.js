@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import ErrorBoundary from './ErrorBoundary';
+import ScssApp from './ScssApp';
 
 // import App from './App';
-import Counter from './Counter';
+// import Counter from './Counter';
 
 Sentry.init({
     dsn:
@@ -18,7 +19,7 @@ const rootElement = document.getElementById('root');
 ReactDOM.render(
     <React.StrictMode>
         <ErrorBoundary>
-            <Counter />
+            <ScssApp />
         </ErrorBoundary>
     </React.StrictMode>,
     rootElement,
