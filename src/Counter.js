@@ -25,15 +25,6 @@ class Counter extends Component {
         });
     };
 
-    handleToggle = () => {
-        this.setState({
-            updateMe: {
-                ...this.state.updateMe,
-                toggleMe: !this.state.updateMe.toggleMe,
-            },
-        });
-    };
-
     render() {
         return (
             <div>
