@@ -28,6 +28,29 @@ function ScssApp() {
                 </Button>
                 <Button color="pink">Button</Button>
             </div>
+            <div className="buttons">
+                <Button size="large" outline={true}>
+                    {/* outline={true} 에서 {true 생략 가능} */}
+                    Button
+                </Button>
+                <Button color="gray" outline={true}>
+                    Button
+                </Button>
+                <Button color="pink" outline={true}>
+                    Button
+                </Button>
+            </div>
+            <div className="buttons">
+                <Button size="large" fullWidth>
+                    Button
+                </Button>
+                <Button size="large" color="gray" fullWidth>
+                    Button
+                </Button>
+                <Button size="large" color="pink" fullWidth>
+                    Button
+                </Button>
+            </div>
         </div>
     );
 }
