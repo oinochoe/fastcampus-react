@@ -44,7 +44,12 @@ function ScssApp() {
                 <Button size="large" fullWidth>
                     Button
                 </Button>
-                <Button size="large" color="gray" fullWidth>
+                <Button
+                    size="large"
+                    color="gray"
+                    fullWidth
+                    className="customized-button"
+                >
                     Button
                 </Button>
                 <Button
