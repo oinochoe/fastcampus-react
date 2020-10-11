@@ -47,7 +47,17 @@ function ScssApp() {
                 <Button size="large" color="gray" fullWidth>
                     Button
                 </Button>
-                <Button size="large" color="pink" fullWidth>
+                <Button
+                    size="large"
+                    color="pink"
+                    fullWidth
+                    onClick={() => {
+                        console.log('클릭!');
+                    }}
+                    onMouseMove={() => {
+                        console.log('mousemove');
+                    }}
+                >
                     Button
                 </Button>
             </div>
