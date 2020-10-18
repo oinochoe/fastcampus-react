@@ -9,24 +9,24 @@ const AppBlock = styled.div`
     border: 1px solid black;
 `;
 
-// const Circle = styled.div`
-//     width: 5rem;
-//     height: 5rem;
-//     background: ${(props) => props.color};
-//     border-radius: 50%;
-//     ${(props) =>
-//         props.huge &&
-//         css`
-//             width: 10rem;
-//             height: 10rem;
-//         `};
-// `;
+const Circle = styled.div`
+    width: 5rem;
+    height: 5rem;
+    background: ${(props) => props.color};
+    border-radius: 50%;
+    ${(props) =>
+        props.huge &&
+        css`
+            width: 10rem;
+            height: 10rem;
+        `};
+`;
 
 function StyledApp() {
     return (
         <AppBlock>
             <Button>Button</Button>
-            {/* <Circle color="blue" huge /> */}
+            <Circle color="blue" huge />
         </AppBlock>
     );
 }
