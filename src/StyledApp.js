@@ -9,6 +9,12 @@ const AppBlock = styled.div`
     border: 1px solid black;
 `;
 
+const ButtonGroup = styled.div`
+    & + & {
+        margin-top: 1rem;
+    }
+`;
+
 const Circle = styled.div`
     width: 5rem;
     height: 5rem;
@@ -33,9 +39,13 @@ function StyledApp() {
     return (
         <ThemeProvider theme={{ palette }}>
             <AppBlock>
-                <Button>Button</Button>
-                <Button color="gray">Button</Button>
-                <Button color="pink">Button</Button>
+                <ButtonGroup>
+                    <Button size="large">Button</Button>
+                    <Button color="gray">Button</Button>
+                    <Button size="small" color="pink">
+                        Button
+                    </Button>
+                </ButtonGroup>
                 <Circle color="blue" huge />
             </AppBlock>
         </ThemeProvider>
